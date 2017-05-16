@@ -12,8 +12,9 @@ install:
   - yarn install
 
 script:
-  - npm run deploy:dev
-  - npm run deploy:prod
+  - yarn lint
+  - yarn test
+  - yarn deploy
 
 after_success:
-  - npm run codecov
+  - yarn codecov
